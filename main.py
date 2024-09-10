@@ -42,5 +42,27 @@ def add():
     
     CSV.addApplication(date, jobTitle, company, hiringManager, description, status)
     
+
 CSV.initalizeCSV()
-add()
+
+def main():
+    while True:
+    
+        print('\n1. Add a new transaction')
+        print('2. Get previous transactions')
+        print('3. Edit previous job status ')
+        print('4. Exit')
+        request = input('Select your request by entering (1-4): ')
+                 
+        if request == '4':
+            print("Exiting... thank you!")
+            break
+        elif request == '1':
+            add()
+        elif request == '2':
+            pass
+        elif request == '3':
+            pass
+        
+if __name__ == '__main__':
+    main()
